@@ -1,9 +1,15 @@
-import 'tailwindcss/tailwind.css'
+import { MantineProvider } from '@mantine/core'
+
+import '@/src/lib/tailwind.css'
 
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <Component {...pageProps} />
+    </MantineProvider>
+  )
 }
 
 export default MyApp
