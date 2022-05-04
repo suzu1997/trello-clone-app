@@ -13,10 +13,10 @@ Trello風アプリケーションを作ってみる。
 ## 使用技術
 
 - React v18
-- Next v12
-- Tailwind CSS
+- Next.js v12
+- Tailwind CSS v3
 - Mantine
-- react-query
+- react-query v4(Beta)
 - react-dnd
 
 ## ドキュメント
