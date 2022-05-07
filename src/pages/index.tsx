@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 
-import { Button as MantineButton } from '@mantine/core'
+import { CustomButton } from '../components/uiParts'
 
 import type { NextPage } from 'next'
 
@@ -17,9 +17,10 @@ const Home: NextPage = () => {
         <h1 className="text-lg text-blue-600">Trello風アプリケーション</h1>
         ああ
         <Link href="/hello" passHref>
-          <MantineButton component="a">Next link button</MantineButton>
+          <CustomButton dent component="a">凹むボタン</CustomButton>
         </Link>
-        <MantineButton className="mt-4 block">Click me!</MantineButton>
+
+        <CustomButton className="mt-4 block">凹まないボタン</CustomButton>
       </div>
     </>
   )
