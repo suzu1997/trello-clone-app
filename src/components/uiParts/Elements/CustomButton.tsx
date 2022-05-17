@@ -9,7 +9,7 @@ import type { ButtonProps } from '@mantine/core'
  * @remarks カスタマイズしたコンポーネントは、クリック時に凹ませるかを指定できる。
  */
 // NOTE: forwardRef... コンポーネントにrefを渡すために必要 https://zenn.dev/terrierscript/scraps/15ca11388f7424
-const CustomButton = forwardRef<
+export const CustomButton = forwardRef<
   HTMLButtonElement, // refの対象
   ButtonProps<'button' | 'a'> & { dent?: boolean } // props
 >(({ sx, dent, ...props }, ref) => {
@@ -25,5 +25,3 @@ const CustomButton = forwardRef<
     ...props,
   })
 })
-
-export default CustomButton
