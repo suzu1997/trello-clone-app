@@ -1,6 +1,7 @@
 import { MantineProvider } from '@mantine/core'
 
-import '@/src/lib/tailwind.css'
+import 'src/lib/tailwind.css'
+import { MainLayout } from 'src/components/uiParts/Layouts/MainLayout'
 
 import type { AppProps } from 'next/app'
 
@@ -8,7 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     // withNormalizeCSS ... MantineのリセットCSS
     <MantineProvider withGlobalStyles withNormalizeCSS>
-      <Component {...pageProps} />
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
     </MantineProvider>
   )
 }
